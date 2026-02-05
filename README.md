@@ -26,10 +26,7 @@ For the training data, we also provide the reasoning traces
 
 <p align="center">
   <img width="800" src="./assets/reasoning_traces_all_steps.png", alt="Examples for the different input representations">
-</p>
-
-
-
+</p
 ## Environment
 
 ```
@@ -53,13 +50,16 @@ for the version with description and grid based reasoning traces.
 After fine-tuning the model you can evaluate it on all ID test sets via
 
 ```
-python src/eval.py load_model_path="./checkpoints/sft_grid" data_path="./data/train_mirage/test_id/test_level3_4_5_6_grid.jsonl" save_dir="./results_id"
+python src/eval.py load_model_path="./checkpoints/sft_grid" data_path="./data/test_id/test_level3_4_5_6_grid.jsonl" save_dir="./results_id"
 ```
 or on one of the OOD sets 
 
 ```
-python src/eval.py load_model_path="./checkpoints/sft_grid" data_path="./data/train_mirage/test_ood/test_level7_grid.jsonl" save_dir="./results_ood"
+python src/eval.py load_model_path="./checkpoints/sft_grid" data_path="./data/test_ood/test_level7_grid.jsonl" save_dir="./results_ood"
 ```
 
 ## Citation
 *Coming soon!*
+
+## Acknowledgement
+The code in this repository is based on [VSP](https://arxiv.org/abs/2407.01863) and [Mirage](https://www.arxiv.org/abs/2506.17218)
