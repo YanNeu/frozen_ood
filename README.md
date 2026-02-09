@@ -3,7 +3,7 @@
 **Yannic Neuhaus**<sup>1</sup>, **Nicolas Flammarion**<sup>2</sup>, **Matthias Hein**<sup>1</sup>, **Francesco Croce**<sup>3</sup>
 
 <sup>1</sup>*University of Tübingen*
-<sup>2</sup>*EPFL* <sup>3</sup>*Aalto University*
+<sup>2</sup>*EPFL* <sup>3</sup>*ELLIS Institute Finland, Aalto University*
 
 
 [![arXiv](https://img.shields.io/badge/arXiv-23XX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/23XX.XXXXX)
@@ -26,7 +26,9 @@ For the training data, we also provide the reasoning traces
 
 <p align="center">
   <img width="800" src="./assets/reasoning_traces_all_steps.png", alt="Examples for the different input representations">
-</p
+</p>
+
+
 ## Environment
 
 ```
@@ -34,6 +36,7 @@ git clone https://github.com/YanNeu/frozen_ood.git
 cd frozen_ood
 conda env create -f environment.yml
 ```
+
 ## Fine-tuning
 
 Use `task=sft_text` for the text based inputs and `task=sft_image` for image inputs, e.g.
