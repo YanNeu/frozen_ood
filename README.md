@@ -6,7 +6,7 @@
 <sup>2</sup>*EPFL* <sup>3</sup>*ELLIS Institute Finland, Aalto University*
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-23XX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2602.15460)
+[![arXiv](https://img.shields.io/badge/arXiv-2602.15460-b31b1b.svg)](https://arxiv.org/abs/2602.15460)
 
 ## Data
 Download the datasets [here](https://nc.mlcloud.uni-tuebingen.de/index.php/s/gFz9tc2wFryF9Wn) and unzip the file in `./data`.
