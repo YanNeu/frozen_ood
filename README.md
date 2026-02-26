@@ -62,7 +62,14 @@ python src/eval.py load_model_path="./checkpoints/sft_grid" data_path="./data/te
 ```
 
 ## Citation
-*Coming soon!*
+```
+@article{neuhaus2026oodreasoning,
+      title={On the Out-of-Distribution Generalization of Reasoning in Multimodal LLMs for Simple Visual Planning Tasks}, 
+      author={Yannic Neuhaus and Nicolas Flammarion and Matthias Hein and Francesco Croce},
+      journal={arXiv preprint arXiv:2602.15460},
+      year={2026},
+}
+```
 
 ## Acknowledgement
 The code in this repository is based on [VSP](https://arxiv.org/abs/2407.01863) and [Mirage](https://www.arxiv.org/abs/2506.17218)
