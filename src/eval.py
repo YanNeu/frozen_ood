@@ -103,11 +103,17 @@ if __name__ == "__main__":
         preprocess_function = task_test_preprocess_functions[config.task]
         conversations = preprocess_function(sample)
 
-        texts = [processor.apply_chat_template(conversations, tokenize=False)]
+        texts = [
+            processor.apply_chat_template(
+                conversations,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+        ]
         texts = [place_input_image(text, sep_token=None) for text in texts]
         image_inputs, _ = process_vision_info(conversations)
 
-        inputs = processor(text=[t+'<|im_start|>assistant' for t in texts], images=image_inputs, return_tensors="pt", padding=True)
+        inputs = processor(text=texts, images=image_inputs, return_tensors="pt", padding=True)
         inputs = inputs.to(model.device)
 
         with torch.no_grad():
@@ -162,4 +168,3 @@ if __name__ == "__main__":
         
     
     json.dump(results_dict, open(save_path, "w"), indent=4)
-
