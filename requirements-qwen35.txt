@@ -1,0 +1,12 @@
+# Install this overlay after creating the base Conda environment.
+# The Qwen3.5 runs recorded Transformers 5.8.0.dev0; use its stable release
+# rather than an unbounded checkout of the Transformers main branch.
+transformers==5.8.0
+
+# Qwen3.5 uses hybrid linear and full attention. These optional CUDA kernels
+# avoid the slower PyTorch fallback used when the packages are unavailable.
+flash-linear-attention==0.5.0
+causal-conv1d==1.5.2
+
+# Backend required by FLA for Qwen3.5 training on some recent GPUs.
+tilelang==0.1.12

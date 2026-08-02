@@ -107,9 +107,6 @@ if __name__ == "__main__":
     logging.info('=='*20)
 
     processor = AutoProcessor.from_pretrained(config.model)
-    processor.tokenizer.add_tokens("<|latent_pad|>", special_tokens=True)
-    processor.tokenizer.add_tokens("<|latent_start|>", special_tokens=True)
-    processor.tokenizer.add_tokens("<|latent_end|>", special_tokens=True)
     assert processor.tokenizer.padding_side == "right"
 
 
@@ -121,8 +118,6 @@ if __name__ == "__main__":
         model = Qwen2_5_VLForConditionalGeneration.from_pretrained(model_path, config=model_config, device_map="auto", torch_dtype=torch.bfloat16)
     else:
         model = Qwen2_5_VLForConditionalGeneration.from_pretrained(config.load_model_path, device_map="auto", torch_dtype=torch.bfloat16)
-    model.resize_token_embeddings(len(processor.tokenizer))
-
     for param in model.visual.parameters():
         param.requires_grad = False
 
